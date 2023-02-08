@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6522899a.css",
+    "main.js": "/static/js/main.5391f74e.js",
+    "static/media/background.jpg": "/static/media/background.91d0b07640b96c67054c.jpg",
+    "static/media/login-icon.png": "/static/media/login-icon.14b0b13d7542e37f771f.png",
+    "static/media/Discover.svg": "/static/media/Discover.603879d40e82771600dc2eeac34b62d4.svg",
+    "static/media/logo.png": "/static/media/logo.f1bc2c5319b98bcd2136.png",
+    "static/media/Amex.svg": "/static/media/Amex.5222e42bb03a5cdca11e47ac5afc46fd.svg",
+    "static/media/RA_1000.svg": "/static/media/RA_1000.d945fcd304832d6d03bc051f3437536c.svg",
+    "static/media/logo_site_blindado.svg": "/static/media/logo_site_blindado.a52b07216816117a8ba0019693d854a0.svg",
+    "static/media/Hipercard.svg": "/static/media/Hipercard.2c719bc21aa7aa9dfb106e120704e2c2.svg",
+    "static/media/GooglePay.svg": "/static/media/GooglePay.8ea1ed168d3745588ac50213f4826f11.svg",
+    "static/media/Boleto.svg": "/static/media/Boleto.752329eb796baf219a485670d5d41b79.svg",
+    "static/media/ApplePay.svg": "/static/media/ApplePay.c99ed278053f2a2b589c058773622a04.svg",
+    "static/media/Elo.svg": "/static/media/Elo.75058e6b71d7790fdce4e9a8f163c4a8.svg",
+    "static/media/Visa.svg": "/static/media/Visa.92551c8c5f0086f421be8d7521fd9d2f.svg",
+    "static/media/Diners.svg": "/static/media/Diners.2be3795e2b8046266c585f6d8ba3e070.svg",
+    "static/media/Mastercard.svg": "/static/media/Mastercard.ddd605acedef5a8b281d246f94d45c17.svg",
+    "index.html": "/index.html",
+    "main.6522899a.css.map": "/static/css/main.6522899a.css.map",
+    "main.5391f74e.js.map": "/static/js/main.5391f74e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6522899a.css",
+    "static/js/main.5391f74e.js"
+  ]
+}

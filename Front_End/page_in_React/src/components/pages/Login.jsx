@@ -41,7 +41,7 @@ export default function Home() {
         <img className="logo" src={logo} />
         <nav className="nav">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#">Vinhos</a></li>
             <li><a href="#">Kits</a></li>
             <li><a href="#">Acessórios</a></li>
