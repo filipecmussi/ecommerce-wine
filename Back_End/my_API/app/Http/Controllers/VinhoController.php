@@ -25,44 +25,76 @@ class VinhoController extends Controller
      */
     public function store(Request $request)
     {
-        return Vinho::create($request->all());
+        if (Vinho::create($request->all())) {
+
+            return response()->json([
+                'message' => ' Vinho Cadastrado com sucesso '
+            ], 201);
+        }
+
+        return response()->json([
+            'message' => 'Erro ao adicionar o vinho'
+        ], 404);
     }
+
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $vinho
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($vinho)
     {
-        return Vinho::findOrFail($id);
+        $vinho = Vinho::findOrFail($vinho);
+        if ($vinho) {
+
+            return $vinho;
+        }
+
+        return response()->json([
+            'message' => 'Erro ao encontrar o vinho'
+        ], 404);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $vinho
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $vinho)
     {
-        $vinho = Vinho::findOrFail($id);
+        $vinho = Vinho::findOrFail($vinho);
 
-        $vinho->update($request->all());
+        if ($vinho) {
+            $vinho->update($request->all());
 
-        return $vinho;
+            return $vinho;
+        }
+
+        return response()->json([
+            'message' => 'Erro ao Atualizar o vinho'
+        ], 404);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $vinho
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($vinho)
     {
-        return Vinho::destroy($id);
+        if (Vinho::destroy($vinho)) {
+            return response()->json([
+                'message' => ' Vinho Deletado com sucesso '
+            ], 201);
+        }
+
+        return response()->json([
+            'message' => ' Erro ao deletar o vinho '
+        ], 404);;
     }
 }

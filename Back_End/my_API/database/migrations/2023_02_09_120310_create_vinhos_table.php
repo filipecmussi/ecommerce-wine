@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('vinhos', function (Blueprint $table) {
             $table->id();
-            $table->string('nome')->unique(); //o unique tem a função de não deixar o nome se repetir
+            $table->string('nome'); // "->unique()", tem a função de não deixar o nome se repetir
             $table->string('descricao');
             $table->string('valor');
             $table->timestamps(); //data de criação e update.
