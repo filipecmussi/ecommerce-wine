@@ -23,9 +23,15 @@ use Illuminate\Support\Facades\Route;
 // Route::put('vinho/{id}', [VinhoController::class, "update"]);
 // Route::delete('vinho/{id}', [VinhoController::class, "destroy"]);
 
-Route::apiResource('vinho', VinhoController::class);
+Route::group(['middleware' => ['auth:sanctum']], function () {
+
+    Route::apiResource('vinho', VinhoController::class);
+
+    Route::post('logout', [AuthController::class, 'logout']);
+});
 
 Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'Login']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
