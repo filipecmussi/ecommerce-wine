@@ -66,12 +66,19 @@ class VinhoController extends Controller
      */
     public function update(Request $request, $vinho)
     {
+        $path = $request->capa->store('capa_vinhos', 'public');
+
         $vinho = Vinho::findOrFail($vinho);
-
         if ($vinho) {
-            $vinho->update($request->all());
+            $vinho->capa = $path;
 
-            return $vinho;
+            if ($vinho->save()) {
+                return $vinho;
+            }
+
+            return response()->json([
+                'message' => 'Erro ao Atualizar o vinho'
+            ], 404);
         }
 
         return response()->json([

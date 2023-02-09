@@ -26,7 +26,6 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::apiResource('vinho', VinhoController::class);
-
     Route::post('logout', [AuthController::class, 'logout']);
 });
 
